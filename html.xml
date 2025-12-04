@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalid Ali Digital Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Kalid Ali Digital Hub</h1>
+    <p>Welcome to my personal homepage, migrated from lovable.app</p>
+  </header>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>I’m Kalid Ali. This is my personal site with my portfolio, projects, and more.</p>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>Project 1</li>
+        <li>Project 2</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Kalid Ali. Migrated from <a href="https://kalid-ali-digital-hub.lovable.app/">lovable.app</a></p>
+  </footer>
+</body>
+</html>
