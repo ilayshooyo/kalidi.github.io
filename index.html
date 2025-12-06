@@ -1,35 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Kalid Ali Digital Hub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalid Ali | PhD Candidate & Public Health Researcher</title>
+    <meta name="description" content="Academic Portfolio of Kalid Ali - PhD Candidate in Public Health at Lund University. Specializing in Child Health, Nutrition, and Social Epidemiology.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Theme Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9', // Sky Blue
+                            600: '#0284c7', // University Blue
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+        }
+        /* Hide scrollbar for clean look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Kalid Ali Digital Hub</h1>
-    <p>Welcome to my personal homepage, migrated from lovable.app</p>
-  </header>
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>I’m Kalid Ali. This is my personal site with my portfolio, projects, and more.</p>
+<body class="font-sans text-slate-800 antialiased bg-slate-50 selection:bg-brand-500 selection:text-white">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <div class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                        KA
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Kalid<span class="text-brand-600">Ali</span></span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-slate-600 hover:text-brand-600 font-medium transition">Home</a>
+                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition">About</a>
+                    <a href="#publications" class="text-slate-600 hover:text-brand-600 font-medium transition">Publications</a>
+                    <a href="https://scholar.google.com/citations?user=-RDwmqIAAAAJ&hl=en" target="_blank" class="px-5 py-2.5 bg-brand-600 text-white rounded-full font-medium hover:bg-slate-900 transition shadow-lg">
+                        Google Scholar
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-2 font-medium text-slate-700">Home</a>
+                <a href="#about" class="block px-3 py-2 font-medium text-slate-700">About</a>
+                <a href="#publications" class="block px-3 py-2 font-medium text-slate-700">Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Blobs -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float"></div>
+            <div class="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-semibold mb-8 shadow-sm animate-fade-in-up">
+                <span class="flex h-2 w-2 rounded-full bg-brand-500 mr-2"></span>
+                PhD Candidate in Public Health
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-6 animate-fade-in-up" style="animation-delay: 0.1s;">
+                Public Health, Nutrition <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-slate-800">
+                    & Social Epidemiology.
+                </span>
+            </h1>
+            
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-600 animate-fade-in-up" style="animation-delay: 0.2s;">
+                Researcher affiliated with <strong>Lund University</strong> and <strong>Dalarna University</strong>. Dedicated to investigating child health determinants and evaluating nutrition interventions.
+            </p>
+            
+            <div class="mt-10 flex justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.3s;">
+                <a href="#publications" class="px-8 py-4 rounded-full bg-slate-900 text-white font-semibold hover:bg-brand-600 hover:shadow-lg transition transform hover:-translate-y-1">
+                    View Research
+                </a>
+                <a href="#about" class="px-8 py-4 rounded-full bg-white text-slate-700 border border-slate-200 font-semibold hover:border-brand-500 hover:text-brand-600 transition">
+                    About Me
+                </a>
+            </div>
+        </div>
     </section>
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>Project 1</li>
-        <li>Project 2</li>
-      </ul>
+
+    <!-- AFFILIATIONS BAR -->
+    <div class="py-8 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
+                <div class="flex items-center gap-2 text-lg font-bold text-slate-800"><i class="fas fa-university text-brand-600"></i> Lund University</div>
+                <div class="flex items-center gap-2 text-lg font-bold text-slate-800"><i class="fas fa-university text-brand-600"></i> Dalarna University</div>
+                <div class="flex items-center gap-2 text-lg font-bold text-slate-800"><i class="fas fa-book-medical text-brand-600"></i> Global Health Action</div>
+                <div class="flex items-center gap-2 text-lg font-bold text-slate-800"><i class="fas fa-child text-brand-600"></i> Acta Paediatrica</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Visual -->
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-brand-500 to-slate-600 rounded-2xl blur-lg opacity-20"></div>
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-white aspect-[4/5] flex items-center justify-center bg-slate-100">
+                        <!-- Generic Academic Placeholder since no photo provided -->
+                        <i class="fas fa-user-graduate text-9xl text-slate-300"></i>
+                        
+                        <!-- Floating Card -->
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 rounded-xl border border-slate-100 shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-brand-100 p-3 rounded-full text-brand-600">
+                                    <i class="fas fa-graduation-cap text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-slate-500 font-medium">Affiliation</p>
+                                    <p class="text-slate-900 font-bold">PhD Candidate, Public Health</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div>
+                    <h2 class="text-brand-600 font-bold tracking-wide uppercase text-sm mb-2">About Me</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+                        Advancing Public Health through Evidence-Based Research.
+                    </h3>
+                    <div class="space-y-4 text-lg text-slate-600">
+                        <p>
+                            I am a PhD Candidate in Public Health at <strong>Lund University</strong>, with a research affiliation at <strong>Dalarna University</strong>. My work focuses on Social Epidemiology and Child Health, bridging the gap between clinical nutrition and social determinants of health.
+                        </p>
+                        <p>
+                            My current research investigates the prevalence and determinants of malnutrition among under-five children, both in Swedish contexts and global humanitarian settings. I have a specific interest in evaluating the efficacy of interventions such as <strong>Unconditional Cash Transfers (UCT)</strong> combined with nutrition counseling.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-2 gap-6">
+                        <div class="border-l-4 border-brand-500 pl-4">
+                            <h4 class="font-bold text-slate-900 text-xl">Social Epidemiology</h4>
+                            <p class="text-slate-500">Research Focus</p>
+                        </div>
+                        <div class="border-l-4 border-slate-500 pl-4">
+                            <h4 class="font-bold text-slate-900 text-xl">Child Health</h4>
+                            <p class="text-slate-500">Primary Domain</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+
+    <!-- RESEARCH INTERESTS -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Research Interests</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl border border-slate-100 transition duration-300">
+                    <div class="text-brand-600 text-3xl mb-4"><i class="fas fa-baby"></i></div>
+                    <h4 class="text-xl font-bold mb-2">Child Health & Nutrition</h4>
+                    <p class="text-slate-600">Investigating stunting, wasting, and overweight prevalence in under-five populations.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl border border-slate-100 transition duration-300">
+                    <div class="text-brand-600 text-3xl mb-4"><i class="fas fa-users"></i></div>
+                    <h4 class="text-xl font-bold mb-2">Social Epidemiology</h4>
+                    <p class="text-slate-600">Analyzing how social structures, migration, and economic status impact health outcomes.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl border border-slate-100 transition duration-300">
+                    <div class="text-brand-600 text-3xl mb-4"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h4 class="text-xl font-bold mb-2">Intervention Evaluation</h4>
+                    <p class="text-slate-600">Assessing the impact of cash transfers and counseling on health metrics.</p>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
-  <footer>
-    <p>© 2025 Kalid Ali. Migrated from <a href="https://kalid-ali-digital-hub.lovable.app/">lovable.app</a></p>
-  </footer>
+
+    <!-- PUBLICATIONS SECTION -->
+    <section id="publications" class="py-24 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-brand-400 font-bold uppercase text-sm mb-2">Key Work</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold">Selected Publications</h3>
+                </div>
+                <a href="https://scholar.google.com/citations?user=-RDwmqIAAAAJ&hl=en" target="_blank" class="hidden md:block text-white border-b border-brand-500 pb-1 hover:text-brand-400 transition">View on Google Scholar <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+            </div>
+
+            <div class="space-y-6">
+                
+                <!-- Publication 1 -->
+                <div class="group flex flex-col md:flex-row items-start md:items-center bg-slate-800/50 border border-slate-700 rounded-2xl p-6 hover:bg-slate-800 transition">
+                    <div class="flex-1">
+                        <div class="flex flex-wrap items-center gap-3 mb-2">
+                            <span class="px-3 py-1 bg-brand-900 text-brand-300 text-xs font-bold rounded-full">2023</span>
+                            <span class="text-slate-400 text-sm font-semibold">Global Health Action</span>
+                        </div>
+                        <h4 class="text-lg md:text-xl font-bold mb-2 text-white group-hover:text-brand-400 transition">
+                            The effect of nutrition counseling and unconditional cash transfer on child growth and family food security
+                        </h4>
+                        <p class="text-slate-400 text-sm">
+                            K Ali, F Elmi, M Gomersall, K Persson, M Klingberg-Allvin. <br>
+                            <em>A quasi-experimental study examining interventions in fragile settings.</em>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Publication 2 -->
+                <div class="group flex flex-col md:flex-row items-start md:items-center bg-slate-800/50 border border-slate-700 rounded-2xl p-6 hover:bg-slate-800 transition">
+                    <div class="flex-1">
+                        <div class="flex flex-wrap items-center gap-3 mb-2">
+                            <span class="px-3 py-1 bg-brand-900 text-brand-300 text-xs font-bold rounded-full">2024</span>
+                            <span class="text-slate-400 text-sm font-semibold">Acta Paediatrica</span>
+                        </div>
+                        <h4 class="text-lg md:text-xl font-bold mb-2 text-white group-hover:text-brand-400 transition">
+                            Malnutrition among under-five children in Sweden: A register-based study
+                        </h4>
+                        <p class="text-slate-400 text-sm">
+                            K Ali, M Gomersall, A Hjern, K Persson, M Klingberg-Allvin. <br>
+                            <em>Analysis of national registry data to determine prevalence in a high-income setting.</em>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Publication 3 -->
+                <div class="group flex flex-col md:flex-row items-start md:items-center bg-slate-800/50 border border-slate-700 rounded-2xl p-6 hover:bg-slate-800 transition">
+                    <div class="flex-1">
+                        <div class="flex flex-wrap items-center gap-3 mb-2">
+                            <span class="px-3 py-1 bg-brand-900 text-brand-300 text-xs font-bold rounded-full">2023</span>
+                            <span class="text-slate-400 text-sm font-semibold">Systematic Review</span>
+                        </div>
+                        <h4 class="text-lg md:text-xl font-bold mb-2 text-white group-hover:text-brand-400 transition">
+                            Prevalence and determinants of malnutrition among under-five children in Sweden
+                        </h4>
+                        <p class="text-slate-400 text-sm">
+                            K Ali, M Gomersall, K Persson, M Klingberg-Allvin. <br>
+                            <em>A systematic review and meta-analysis protocol.</em>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-8 text-center md:hidden">
+                <a href="https://scholar.google.com/citations?user=-RDwmqIAAAAJ&hl=en" class="text-brand-400 font-semibold border-b border-brand-400 pb-1">View Full Profile on Google Scholar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-12 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <span class="font-bold text-xl text-slate-900">Kalid<span class="text-brand-600">Ali</span></span>
+                <p class="text-slate-500 text-sm mt-1">PhD Candidate | Public Health | Social Epidemiology</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="https://scholar.google.com/citations?user=-RDwmqIAAAAJ&hl=en" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand-600 hover:text-white transition">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+            </div>
+            <div class="text-slate-400 text-sm">
+                &copy; <script>document.write(new Date().getFullYear())</script> Kalid Ali. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
 </body>
 </html>
